@@ -1,0 +1,23 @@
+header {
+  padding: 200px 0;
+  background: #2a2f27 url("../assets/images/banner.jpg") no-repeat;
+  background-size: cover; }
+  header .logo {
+    text-align: center; }
+    header .logo a {
+      display: inline-block; }
+    header .logo img {
+      max-width: 100%;
+      max-height: 100%; }
+    header .logo h1 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 80px;
+      font-weight: 900;
+      color: #FFF; }
+    header .logo span {
+      padding-top: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5); }

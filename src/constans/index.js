@@ -1,0 +1,1 @@
+export const CHANGE_STATE_PROP = '_CHANGE_STATE_PROP'

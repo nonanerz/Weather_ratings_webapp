@@ -1,0 +1,33 @@
+@import "./normalize.scss";
+@import "./variables.scss";
+
+@import "../components/Header/Header.scss";
+@import "../components/Footer/Footer.scss";
+@import "../components/Select/Select.scss";
+
+@import "../components/pages/Home/Home.scss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+@import "../../theme/variables.scss";
+
+footer {
+  padding: 50px 0;
+  background-color: #1d1d1d;
+  color: $main-color;
+  text-align: center;
+  .social-links-container {
+    display: inline-block;
+    text-align: center;
+    .social-links-wrapper {
+      margin-top: 10px;
+      text-align: center;
+      .social-item {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a.social {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          &.instagram {
+            background: url('../assets/images/social-icons/instagram.svg') no-repeat;
+          }
+          &.facebook {
+            background: url('../assets/images/social-icons/facebook.svg') no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}
