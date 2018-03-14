@@ -17,7 +17,7 @@ export default class Footer extends Component {
             </ul>
           </div>
           <div className='copyright-container'>
-            <span>Copyright by WHEATHER RATE.</span>
+            <span>Copyright by WEATHER RATE.</span>
             <span>Developed by GeekHub students</span>
           </div>
         </div>

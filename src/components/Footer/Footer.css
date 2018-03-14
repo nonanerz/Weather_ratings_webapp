@@ -3,28 +3,36 @@ footer {
   background-color: #1d1d1d;
   color: #FFF;
   text-align: center; }
-  footer .social-links-container {
-    display: inline-block;
-    text-align: center; }
-    footer .social-links-container .social-links-wrapper {
-      margin-top: 10px;
-      text-align: center; }
-      footer .social-links-container .social-links-wrapper .social-item {
-        display: inline-block;
-        margin-right: 10px; }
-        footer .social-links-container .social-links-wrapper .social-item:last-child {
-          margin-right: 0; }
-        footer .social-links-container .social-links-wrapper .social-item a.social {
-          display: inline-block;
-          width: 30px;
-          height: 30px; }
-          footer .social-links-container .social-links-wrapper .social-item a.social.instagram {
-            background: url("../assets/images/social-icons/instagram.svg") no-repeat; }
-          footer .social-links-container .social-links-wrapper .social-item a.social.facebook {
-            background: url("../assets/images/social-icons/facebook.svg") no-repeat; }
-  footer .copyright-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    font-size: 11px; }
+
+footer .social-links-container {
+  display: inline-block;
+  text-align: center; }
+
+footer .social-links-container .social-links-wrapper {
+  margin-top: 10px;
+  text-align: center; }
+
+footer .social-links-container .social-links-wrapper .social-item {
+  display: inline-block;
+  margin-right: 10px; }
+
+footer .social-links-container .social-links-wrapper .social-item:last-child {
+  margin-right: 0; }
+
+footer .social-links-container .social-links-wrapper .social-item a.social {
+  display: inline-block;
+  width: 30px;
+  height: 30px; }
+
+footer .social-links-container .social-links-wrapper .social-item a.social.instagram {
+  background: url("../assets/images/social-icons/instagram.svg") no-repeat; }
+
+footer .social-links-container .social-links-wrapper .social-item a.social.facebook {
+  background: url("../assets/images/social-icons/facebook.svg") no-repeat; }
+
+footer .copyright-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 11px; }

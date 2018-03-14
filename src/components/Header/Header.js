@@ -6,7 +6,7 @@ export default class Header extends Component {
       <header className='header-section'>
         <div className='container'>
           <div className='logo'>
-            <a href='#'><img src={require('../../assets/images/wr-white.png')}/></a>
+            <img src={require('../../assets/images/wr-white.png')}/>
             {/*<h1>wheather</h1>*/}
             {/*<span>rate</span>*/}
           </div>

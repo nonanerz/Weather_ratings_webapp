@@ -1,10 +1,9 @@
 import { connect } from 'react-redux'
-import { changeStateProp } from '../../../actions'
-import Home from './Home'
+import { changeStateProp } from '../../actions'
+import WeatherItem from './WeatherItem'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    city: state.main.city,
     ...ownProps
   }
 }
@@ -18,9 +17,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const HomeContainer = connect(
+const WeatherItemContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(WeatherItem)
 
-export default HomeContainer
+export default WeatherItemContainer

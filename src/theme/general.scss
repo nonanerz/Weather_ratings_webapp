@@ -4,6 +4,9 @@
 @import "../components/Header/Header.scss";
 @import "../components/Footer/Footer.scss";
 @import "../components/Select/Select.scss";
+@import "../components/Rating/Rating.scss";
+@import "../components/WeatherItem/WeatherItem.scss";
+@import "../components/SignInPopup/SignInPopup.scss";
 
 @import "../components/pages/Home/Home.scss";
 
@@ -28,6 +31,14 @@ ul, li {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 50px;
+  transition: $resize-transition-time;
+  @media screen and (max-width: $large) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $small) {
+    padding: 0 15px;
+  }
 }

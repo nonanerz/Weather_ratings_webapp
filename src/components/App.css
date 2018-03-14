@@ -369,17 +369,15 @@ th {
   padding: 0; }
 
 header {
-  padding: 200px 0;
+  padding: 50px 0;
   background: #2a2f27 url("../assets/images/banner.jpg") no-repeat;
   background-size: cover; }
 
 header .logo {
   text-align: center; }
 
-header .logo a {
-  display: inline-block; }
-
 header .logo img {
+  display: inline-block;
   max-width: 100%;
   max-height: 100%; }
 
@@ -499,8 +497,71 @@ footer .copyright-container {
 .select-container .option-wrapper .option:first-child {
   margin-top: 0; }
 
+.rate-container {
+  display: flex;
+  align-items: center; }
+
+.rate-container .stars-container {
+  margin-right: 10px; }
+
+.rate-container .rate-counts {
+  font: normal 18px "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #282e3f; }
+
+.weather-item-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-bottom: 30px; }
+
+.weather-item-container:last-child {
+  margin-bottom: 0; }
+
+.weather-item-container .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  min-width: 150px;
+  width: 150px;
+  min-height: 150px;
+  height: 150px;
+  background-color: #f2f2f2; }
+
+.weather-item-container .img-container img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.weather-item-container .data-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.weather-item-container .data-container .weather-title {
+  margin-bottom: 10px;
+  font: bold 18px "Open Sans", sans-serif;
+  font-size: 35px;
+  color: #282e3f; }
+
+.weather-item-container .data-container .weather-description {
+  margin-bottom: 10px;
+  font: normal 18px "Open Sans", sans-serif;
+  color: #282e3f; }
+
+.weather-item-container .data-container .weather-link {
+  margin-bottom: 10px;
+  font: normal 18px "Open Sans", sans-serif;
+  color: #282e3f;
+  cursor: pointer; }
+
 .home-section {
   padding: 50px 0; }
+
+.home-section .select-container {
+  margin: 0 auto 30px; }
 
 * {
   margin: 0;
@@ -518,8 +579,18 @@ ul, li {
   list-style-type: none; }
 
 .container {
-  max-width: 1300px;
-  margin: 0 auto; }
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+  transition: 0.2s; }
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 30px; } }
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 15px; } }
 
 .App {
   display: flex;

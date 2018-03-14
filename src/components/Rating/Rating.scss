@@ -1,0 +1,14 @@
+@import "../../theme/variables.scss";
+
+.rate-container {
+  display: flex;
+  align-items: center;
+  .stars-container {
+    margin-right: 10px;
+  }
+  .rate-counts {
+    font: $common-font;
+    font-size: 16px;
+    color: $main-font-color;
+  }
+}

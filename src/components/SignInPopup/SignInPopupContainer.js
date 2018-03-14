@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
 import { changeStateProp } from '../../actions'
-import WheatherItem from './WheatherItem'
+import SignInPopup from './SignInPopup'
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    SignInPopupContent: state.main.SignInPopupContent,
     ...ownProps
   }
 }
@@ -17,9 +18,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const AppContainer = connect(
+const SignInPopupContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(WheatherItem)
+)(SignInPopup)
 
-export default AppContainer
+export default SignInPopupContainer

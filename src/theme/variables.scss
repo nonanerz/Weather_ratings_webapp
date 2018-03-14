@@ -1,9 +1,17 @@
-// colors
-$main-color: #FFF;
-
 // screen sizes
 $extra-small: 320px;
 $small: 576px;
 $medium: 768px;
 $large: 992px;
 $extra-large: 1200px;
+
+// fonts
+$common-font: normal 18px 'Open Sans', sans-serif;
+$common-font-bold: bold 18px 'Open Sans', sans-serif;
+
+// colors
+$main-color: #FFF;
+$main-font-color: #282e3f;
+
+//transitions
+$resize-transition-time: 0.2s

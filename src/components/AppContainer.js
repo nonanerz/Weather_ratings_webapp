@@ -4,6 +4,7 @@ import App from './App'
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    SignInPopupShow: state.main.SignInPopupShow,
     ...ownProps
   }
 }
