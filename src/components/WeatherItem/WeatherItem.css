@@ -3,45 +3,38 @@
   justify-content: center;
   padding: 15px;
   margin-bottom: 30px; }
-
-.weather-item-container:last-child {
-  margin-bottom: 0; }
-
-.weather-item-container .img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 15px;
-  padding: 10px;
-  border-radius: 20px;
-  min-width: 150px;
-  width: 150px;
-  min-height: 150px;
-  height: 150px;
-  background-color: #f2f2f2; }
-
-.weather-item-container .img-container img {
-  max-width: 100%;
-  max-height: 100%; }
-
-.weather-item-container .data-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-.weather-item-container .data-container .weather-title {
-  margin-bottom: 10px;
-  font: bold 18px "Open Sans", sans-serif;
-  font-size: 35px;
-  color: #282e3f; }
-
-.weather-item-container .data-container .weather-description {
-  margin-bottom: 10px;
-  font: normal 18px "Open Sans", sans-serif;
-  color: #282e3f; }
-
-.weather-item-container .data-container .weather-link {
-  margin-bottom: 10px;
-  font: normal 18px "Open Sans", sans-serif;
-  color: #282e3f;
-  cursor: pointer; }
+  .weather-item-container:last-child {
+    margin-bottom: 0; }
+  .weather-item-container .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    min-width: 150px;
+    width: 150px;
+    min-height: 150px;
+    height: 150px;
+    background-color: #f2f2f2; }
+    .weather-item-container .img-container img {
+      max-width: 100%;
+      max-height: 100%; }
+  .weather-item-container .data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .weather-item-container .data-container .weather-title {
+      margin-bottom: 10px;
+      font: bold 18px "Open Sans", sans-serif;
+      font-size: 35px;
+      color: #282e3f; }
+    .weather-item-container .data-container .weather-description {
+      margin-bottom: 10px;
+      font: normal 18px "Open Sans", sans-serif;
+      color: #282e3f; }
+    .weather-item-container .data-container .weather-link {
+      margin-bottom: 10px;
+      font: normal 18px "Open Sans", sans-serif;
+      color: #282e3f;
+      cursor: pointer; }

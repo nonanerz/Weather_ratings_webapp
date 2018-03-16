@@ -1,1 +1,57 @@
 @import "../../theme/variables.scss";
+
+.sign-in-popup-container {
+  width: 100%;
+  z-index: 5;
+  padding: 0 15px;
+  height: 100%;
+  max-height: 100%;
+  background: rgba(40, 46, 63, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  .sign-in-popup {
+    position: relative;
+    padding: 50px;
+    margin: 0;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+    .popup-title {
+      font: $common-font;
+      font-size: 25px;
+      color: $main-font-color;
+    }
+    .popup-description {
+      margin: 15px 0;
+      font: $common-font;
+      color: $main-font-color;
+    }
+    .facebook-button {
+      display: inline-block;
+      padding: 8px;
+      border: none;
+      border-radius: 7px;
+      background-color: #3b5998;
+      font: $common-font;
+      font-size: 14px;
+      color: #fff;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: red;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}

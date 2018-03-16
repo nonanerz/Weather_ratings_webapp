@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Rating from '../Rating/Rating'
+import Rating from '../Rating/RatingContainer'
 
 export default class WeatherItem extends Component {
-  changeRate () {
-    this.props.changeStateProp('')
+  constructor (props) {
+    super(props)
   }
   render () {
     return (
@@ -17,7 +17,12 @@ export default class WeatherItem extends Component {
           <p className='weather-description'>{this.props.item.description}</p>
           <a className='weather-link' href={this.props.item.url} target='_blank'>Link</a>
           <div className='rate-container'>
-            <Rating rate={this.props.item.rating[0].rate} count={this.props.item.rating[0].count} changeRate={this.changeRate} />
+            <Rating
+              rate={this.props.item.rating[0].rate}
+              count={this.props.item.rating[0].count}
+              resource={this.props.item._id}
+              currentCity={this.props.currentCity}
+            />
           </div>
         </div>
       </div>

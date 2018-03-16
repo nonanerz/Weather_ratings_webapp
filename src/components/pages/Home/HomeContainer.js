@@ -4,7 +4,7 @@ import Home from './Home'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    city: state.main.city,
+    region: state.main.region,
     ...ownProps
   }
 }

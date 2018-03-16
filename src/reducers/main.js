@@ -4,7 +4,8 @@ import {CHANGE_STATE_PROP} from '../constans/index'
 const REDUCER = 'MAIN'
 const defaultState = {
   SignInPopupShow: false,
-  city: ''
+  SignInPopupContent: {},
+  region: ''
 }
 
 export default (state = defaultState, action) => {

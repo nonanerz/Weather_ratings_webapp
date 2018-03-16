@@ -39,7 +39,6 @@ export default class Select extends Component {
     return false
   }
   toggleSelect () {
-    console.log(111111111)
     if (!this.props.disabled) {
       this.setState(prevState => {
         return {isOpen: !prevState.isOpen}

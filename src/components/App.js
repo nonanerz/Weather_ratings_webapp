@@ -3,10 +3,11 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import './App.css'
 import { FACEBOOK_APP_ID } from '../constans'
+import API from '../services/api'
 
 // router
 import {Route, Switch} from 'react-router'
-import {HashRouter} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 
 // components
 import Header from './Header/Header'
@@ -50,24 +51,21 @@ class App extends Component {
       })
       FB.AppEvents.logPageView()
     }
-
-  }
-  getLoginStatus () {
-    window.FB.getLoginStatus(function(response) {
-      console.log(response)
-    })
+    API.getUserLocation()
+      .then((location) => {
+        this.props.changeStateProp('region', location.region, 'main')
+      })
   }
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div className='App'>
-          <button onClick={this.getLoginStatus}>Facebook</button>
           <Header />
           <Home />
           <Footer />
           {this.props.SignInPopupShow && <SignInPopup />}
         </div>
-      </HashRouter>
+      </BrowserRouter>
     )
   }
 }

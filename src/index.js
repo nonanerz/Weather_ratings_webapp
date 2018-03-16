@@ -29,7 +29,7 @@ export const store = createStore(
 )
 
 // sync store with storage
-persistStore(store, {storage: asyncSessionStorage}, () => {
+persistStore(store, {storage: asyncSessionStorage, blacklist: ['main']}, () => {
   ReactDOM.render(
     (
       <Provider store={store}>

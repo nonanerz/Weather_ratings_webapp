@@ -1,11 +1,9 @@
 import { connect } from 'react-redux'
 import { changeStateProp } from '../../actions'
-import SignInPopup from './SignInPopup'
+import Rating from './Rating'
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(2222, state.main.SignInPopupContent)
   return {
-    SignInPopupContent: state.main.SignInPopupContent,
     ...ownProps
   }
 }
@@ -19,9 +17,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const SignInPopupContainer = connect(
+const RatingContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignInPopup)
+)(Rating)
 
-export default SignInPopupContainer
+export default RatingContainer
