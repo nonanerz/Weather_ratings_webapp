@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+// import API from '../../../services/api'
 
 // Components
 import TextArea from '../../TextArea/TextArea'
@@ -12,6 +13,7 @@ export default class CommentsSection extends Component {
       comments: []
     }
     this.changeCommentsText = this.changeCommentsText.bind(this)
+    this.clickOnSubmitButton = this.clickOnSubmitButton.bind(this)
     this.submit = this.submit.bind(this)
     this.getCommentsDate = this.getCommentsDate.bind(this)
   }
@@ -28,8 +30,34 @@ export default class CommentsSection extends Component {
     this.setState({value: event.target.value})
   }
 
-  submit () {
+  clickOnSubmitButton () {
+    if (this.state.value) {
+      let SignInPopupContent = {
+        title: 'Comment',
+        description: 'Please sign in to continue',
+        close: true,
+        callback: (userData) => {
+          this.submit(userData)
+        }
+      }
+      this.props.changeStateProp('SignInPopupContent', SignInPopupContent, 'main')
+      this.props.changeStateProp('SignInPopupShow', true, 'main')
+    }
+  }
 
+  submit (userData) {
+    if (this.state.value) {
+      console.log(userData)
+      // let commentData = {
+      //   userName: userData.name,
+      //   avatar: userData.userAvatar,
+      //   text: this.state.value
+      // }
+      // API.postComment(commentData)
+      //   .then((res) => {
+      //     console.log(22222, res)
+      //   })
+    }
   }
 
   getCommentsDate (date) {
@@ -46,7 +74,10 @@ export default class CommentsSection extends Component {
             change={this.changeCommentsText}
             className='comment-field'
           />
-          <button className='submit-comment-btn' onClick={this.submit}>Submit</button>
+          <button
+            className={`submit-comment-btn ${!this.state.value ? 'disabled' : ''}`}
+            disabled={!this.state.value}
+            onClick={this.clickOnSubmitButton}>Submit</button>
         </div>
         <div className='comments-scroll-container'>
           <ul className='comment-wrapper'>

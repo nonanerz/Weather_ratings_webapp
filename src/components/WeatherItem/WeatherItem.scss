@@ -82,6 +82,12 @@
     &:hover {
       background: #de3d27;
     }
+    &.disabled {
+      opacity: 0.8;
+      &:hover {
+        background: $accent-color;
+      }
+    }
   }
   .data-container {
     position: relative;

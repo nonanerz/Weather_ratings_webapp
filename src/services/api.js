@@ -59,4 +59,25 @@ export default class API {
         }
       })
   }
+  static postComment (data) {
+    return axios(`/comments`, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: JSON.stringify(data)
+    })
+      .then(response => {
+        return response.data // return response;
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else {
+          console.log('Strange Error', error.message)
+        }
+      })
+  }
 }

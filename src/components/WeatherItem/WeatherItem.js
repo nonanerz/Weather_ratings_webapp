@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 // components
 import Rating from '../Rating/RatingContainer'
-import CommentsSection from './CommentsSection/CommentsSection'
+import CommentsSection from './CommentsSection/CommentsSectionContainer'
 
 export default class WeatherItem extends Component {
   constructor (props) {

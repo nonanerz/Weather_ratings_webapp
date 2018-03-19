@@ -590,6 +590,12 @@ footer .copyright-container {
 .weather-item-container .submit-comment-btn:hover {
   background: #de3d27; }
 
+.weather-item-container .submit-comment-btn.disabled {
+  opacity: 0.8; }
+
+.weather-item-container .submit-comment-btn.disabled:hover {
+  background: #e95d3c; }
+
 .weather-item-container .data-container {
   position: relative; }
 

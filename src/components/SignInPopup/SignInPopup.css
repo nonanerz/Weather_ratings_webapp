@@ -14,42 +14,37 @@
   justify-content: center;
   align-items: center;
   overflow: scroll; }
-
-.sign-in-popup-container .sign-in-popup {
-  position: relative;
-  padding: 50px;
-  margin: 0;
-  text-align: center;
-  border-radius: 20px;
-  background-color: #fff; }
-
-.sign-in-popup-container .sign-in-popup .popup-title {
-  font: normal 18px "Open Sans", sans-serif;
-  font-size: 25px;
-  color: #282e3f; }
-
-.sign-in-popup-container .sign-in-popup .popup-description {
-  margin: 15px 0;
-  font: normal 18px "Open Sans", sans-serif;
-  color: #282e3f; }
-
-.sign-in-popup-container .sign-in-popup .facebook-button {
-  display: inline-block;
-  padding: 8px;
-  border: none;
-  border-radius: 7px;
-  background-color: #3b5998;
-  font: normal 18px "Open Sans", sans-serif;
-  font-size: 14px;
-  color: #fff; }
-
-.sign-in-popup-container .sign-in-popup .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 20px;
-  height: 20px;
-  background: url("../assets/images/close-btn.png") no-repeat;
-  cursor: pointer;
-  border: none;
-  outline: none; }
+  .sign-in-popup-container .sign-in-popup {
+    position: relative;
+    padding: 50px;
+    margin: 0;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff; }
+    .sign-in-popup-container .sign-in-popup .popup-title {
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 25px;
+      color: #282e3f; }
+    .sign-in-popup-container .sign-in-popup .popup-description {
+      margin: 15px 0;
+      font: normal 18px "Open Sans", sans-serif;
+      color: #282e3f; }
+    .sign-in-popup-container .sign-in-popup .facebook-button {
+      display: inline-block;
+      padding: 8px;
+      border: none;
+      border-radius: 7px;
+      background-color: #3b5998;
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 14px;
+      color: #fff; }
+    .sign-in-popup-container .sign-in-popup .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 20px;
+      height: 20px;
+      background: url("../assets/images/close-btn.png") no-repeat;
+      cursor: pointer;
+      border: none;
+      outline: none; }
