@@ -1,0 +1,15 @@
+.textArea-container .textArea {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  min-height: 55px;
+  overflow: hidden;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: 2px solid #d2d7de;
+  background-color: #fff;
+  resize: none;
+  color: rgba(40, 46, 63, 0.811765);
+  font: normal 18px "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 25px; }

@@ -59,12 +59,12 @@ export default class Home extends Component {
       }
     }
     this.setState({
-      cities: CITIES ? CITIES : []
+      cities: CITIES || []
     }, () => {
       if (index) {
         this.setState((prevState) => {
           return {
-            currentCity: prevState.cities[index].value,
+            currentCity: prevState.cities[index].value
           }
         })
       }
@@ -93,7 +93,6 @@ export default class Home extends Component {
     city = city || 'any'
     API.getResources(city)
       .then((resources) => {
-        console.log(333333, resources)
         if (resources) {
           this.setState({resources})
         }

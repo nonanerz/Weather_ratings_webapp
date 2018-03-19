@@ -2,31 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85f6a0fe-eabf-440d-af88-badf7ebe63ec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Rating/RatingContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constans/cities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextArea/TextArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextArea/TextArea.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Rating/Rating.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rating/Rating.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Rating/Rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rating/Rating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rating/RatingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rating/RatingContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Select/Select.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Select/Select.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Select/Select.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Select/Select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopupContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopupContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItemContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItemContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home/HomeContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/HomeContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constans/cities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/cities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/general.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/general.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,24 +53,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/Home/Home.js">
+      <file leaf-file-name="WeatherItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="95" column="23" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#96#136#0" expanded="true" />
+                <element signature="e#91#137#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignInPopup.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+            <state relative-caret-position="105">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#22#60#0" expanded="true" />
+                <element signature="e#311#347#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,21 +83,11 @@
       <file leaf-file-name="SignInPopup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="49" column="61" lean-forward="true" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="e#22#62#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="general.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/theme/general.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -94,9 +102,17 @@
       <find>whea</find>
       <find>Star</find>
       <find>333</find>
+      <find>console.lo</find>
+      <find>Select</find>
+      <find>data-wrapper</find>
+      <find>comment-input-container</find>
+      <find>$butt</find>
+      <find>$bu</find>
+      <find>data-container</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/src/components</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -125,29 +141,33 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/pages/Home/Home.scss" />
         <option value="$PROJECT_DIR$/src/components/Header/Header.scss" />
-        <option value="$PROJECT_DIR$/src/theme/variables.scss" />
         <option value="$PROJECT_DIR$/src/components/Rating/Rating.scss" />
-        <option value="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" />
         <option value="$PROJECT_DIR$/src/constans/index.js" />
         <option value="$PROJECT_DIR$/src/components/AppContainer.js" />
         <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopupContainer.js" />
         <option value="$PROJECT_DIR$/src/reducers/main.js" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/components/Rating/RatingContainer.js" />
         <option value="$PROJECT_DIR$/src/components/WeatherItem/WeatherItemContainer.js" />
         <option value="$PROJECT_DIR$/src/components/pages/Home/HomeContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/Select/Select.js" />
         <option value="$PROJECT_DIR$/src/services/api.js" />
         <option value="$PROJECT_DIR$/src/components/Rating/Rating.js" />
-        <option value="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" />
         <option value="$PROJECT_DIR$/src/config/index.js" />
         <option value="$PROJECT_DIR$/src/constans/cities.js" />
         <option value="$PROJECT_DIR$/src/components/pages/Home/Home.js" />
-        <option value="$PROJECT_DIR$/src/theme/general.scss" />
-        <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" />
         <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" />
+        <option value="$PROJECT_DIR$/src/components/Select/Select.js" />
+        <option value="$PROJECT_DIR$/src/theme/general.scss" />
+        <option value="$PROJECT_DIR$/src/components/TextArea/TextArea.js" />
+        <option value="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.scss" />
+        <option value="$PROJECT_DIR$/src/theme/variables.scss" />
+        <option value="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.js" />
+        <option value="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" />
+        <option value="$PROJECT_DIR$/src/components/TextArea/TextArea.scss" />
+        <option value="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" />
+        <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
       </list>
     </option>
   </component>
@@ -162,8 +182,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="106" />
+    <option name="y" value="66" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
@@ -197,6 +218,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="SignInPopup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="TextArea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherItem" type="462c0819:PsiDirectoryNode" />
+              <item name="CommentsSection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
@@ -256,25 +299,28 @@
       <workItem from="1521012274937" duration="19518000" />
       <workItem from="1521044097308" duration="6000" />
       <workItem from="1521102735641" duration="2973000" />
-      <workItem from="1521192219572" duration="9338000" />
+      <workItem from="1521192219572" duration="10892000" />
+      <workItem from="1521444024515" duration="109000" />
+      <workItem from="1521446350848" duration="9895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46974000" />
+    <option name="totallyTimeSpent" value="58532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="1" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37613636" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32935324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -283,7 +329,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,27 +349,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Select/Select.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AppContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -455,46 +483,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Select/Select.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/theme/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AppContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -531,9 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-star-ratings/build/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopupContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -558,28 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#22#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Home/HomeContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Select/Select.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -607,16 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="68" lean-forward="true" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -638,39 +601,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/Home/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="23" />
+        <state relative-caret-position="1365">
+          <caret line="94" column="28" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#96#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/theme/general.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/Select/Select.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        <state relative-caret-position="112">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Select/Select.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="49" column="61" lean-forward="true" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+        <state relative-caret-position="219">
+          <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#22#62#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+        <state>
+          <caret selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/theme/general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TextArea/TextArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="66" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TextArea/TextArea.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/theme/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="87" column="3" lean-forward="true" selection-start-line="87" selection-start-column="3" selection-end-line="87" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#91#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#22#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#22#60#0" expanded="true" />
+            <element signature="e#311#347#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

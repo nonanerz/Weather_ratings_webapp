@@ -3,7 +3,6 @@ import { changeStateProp } from '../../actions'
 import SignInPopup from './SignInPopup'
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(2222, state.main.SignInPopupContent)
   return {
     SignInPopupContent: state.main.SignInPopupContent,
     ...ownProps

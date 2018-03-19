@@ -1,9 +1,11 @@
 .rate-container {
   display: flex;
   align-items: center; }
-  .rate-container .stars-container {
-    margin-right: 10px; }
-  .rate-container .rate-counts {
-    font: normal 18px "Open Sans", sans-serif;
-    font-size: 16px;
-    color: #282e3f; }
+
+.rate-container .stars-container {
+  margin-right: 10px; }
+
+.rate-container .rate-counts {
+  font: normal 18px "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #282e3f; }

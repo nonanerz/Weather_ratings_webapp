@@ -1,4 +1,4 @@
-/* global FB, gapi */
+/* global FB */
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import './App.css'
@@ -6,7 +6,6 @@ import { FACEBOOK_APP_ID } from '../constans'
 import API from '../services/api'
 
 // router
-import {Route, Switch} from 'react-router'
 import {BrowserRouter} from 'react-router-dom'
 
 // components
@@ -15,18 +14,18 @@ import Footer from './Footer/Footer'
 import Home from './pages/Home/HomeContainer'
 import SignInPopup from './SignInPopup/SignInPopupContainer'
 
-const NotFound = () => {
-  return (
-    <Route render={({staticContext}) => {
-      if (staticContext) {
-        staticContext.status = 404
-      }
-      return (<div>
-        <h1>Sorry, can’t find that.</h1>
-      </div>)
-    }}/>
-  )
-}
+// const NotFound = () => {
+//   return (
+//     <Route render={({staticContext}) => {
+//       if (staticContext) {
+//         staticContext.status = 404
+//       }
+//       return (<div>
+//         <h1>Sorry, can’t find that.</h1>
+//       </div>)
+//     }} />
+//   )
+// }
 
 class App extends Component {
   constructor (props) {
@@ -35,14 +34,15 @@ class App extends Component {
   }
   componentWillMount () {
     // Facebook
-    (function(d, s, id){
-      let js, fjs = d.getElementsByTagName(s)[0]
-      if (d.getElementById(id)) {return}
+    (function (d, s, id) {
+      let js
+      let fjs = d.getElementsByTagName(s)[0]
+      if (d.getElementById(id)) { return }
       js = d.createElement(s); js.id = id
-      js.src = "https://connect.facebook.net/en_US/sdk.js"
+      js.src = 'https://connect.facebook.net/en_US/sdk.js'
       fjs.parentNode.insertBefore(js, fjs)
     }(document, 'script', 'facebook-jssdk'))
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
         appId: FACEBOOK_APP_ID,
         cookie: true,
@@ -56,7 +56,7 @@ class App extends Component {
         this.props.changeStateProp('region', location.region, 'main')
       })
   }
-  render() {
+  render () {
     return (
       <BrowserRouter>
         <div className='App'>

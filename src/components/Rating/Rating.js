@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import StarRatings from 'react-star-ratings'
 import API from '../../services/api'
 
-
 export default class Rating extends Component {
   constructor (props) {
     super(props)
@@ -31,18 +30,14 @@ export default class Rating extends Component {
     userData.rating = rating
     userData.resource = this.props.resource
     userData.city = this.props.currentCity
-    console.log(99999, userData)
     API.postRating(userData)
       .then((res) => {
         this.updateRating(rating)
       })
-
   }
 
   updateRating (rating) {
-    this.setState({rating}, () => {
-      console.log(22222, this.state.rating)
-    })
+    this.setState({rating})
   }
 
   render () {
@@ -51,10 +46,10 @@ export default class Rating extends Component {
         <div className='stars-container'>
           <StarRatings
             rating={this.state.rating}
-            starRatedColor="#ffdb4d"
-            starHoverColor="#ffdb4d"
-            starDimension="20px"
-            starSpacing="2px"
+            starRatedColor='#ffdb4d'
+            starHoverColor='#ffdb4d'
+            starDimension='20px'
+            starSpacing='2px'
             changeRating={this.changeRate}
             numberOfStars={5}
           />

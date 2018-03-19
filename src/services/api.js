@@ -9,7 +9,6 @@ export default class API {
       method: 'get'
     })
       .then(response => {
-        console.log(111111, response.data)
         return response.data.resources // return response;
       })
       .catch((error) => {

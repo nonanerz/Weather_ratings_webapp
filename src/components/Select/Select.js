@@ -91,7 +91,7 @@ export default class Select extends Component {
 }
 
 Select.defaultProps = {
-  selectFunction: {},
+  selectFunction: () => {},
   items: [],
   value: '',
   placeholder: '',

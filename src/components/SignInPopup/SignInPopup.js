@@ -1,4 +1,4 @@
-/* global FB, gapi */
+/* global FB */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -36,7 +36,6 @@ export default class SignInPopup extends Component {
     })
   }
   close (userData) {
-    console.log(1111, userData)
     if (userData) {
       this.props.SignInPopupContent.callback(userData)
     }
@@ -52,13 +51,12 @@ export default class SignInPopup extends Component {
             onClick={this.facebookLogin}
             className='facebook-button'
           >Continue with Facebook</button>
-          <button className={`close-btn ${!this.props.SignInPopupContent.close ? 'hidden' : ''}`} />
+          <button onClick={this.close.bind(null, false)} className={`close-btn ${!this.props.SignInPopupContent.close ? 'hidden' : ''}`} />
         </div>
       </div>
     )
   }
 }
-
 
 SignInPopup.defaultProps = {
   SignInPopupContent: {
@@ -71,4 +69,3 @@ SignInPopup.defaultProps = {
 SignInPopup.defaultType = {
   SignInPopupContent: PropTypes.object
 }
-
