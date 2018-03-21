@@ -6,7 +6,6 @@ export default class Footer extends Component {
       <footer className='header-section'>
         <div className='container'>
           <div className='social-links-container'>
-            <h2>Social links</h2>
             <ul className='social-links-wrapper'>
               <li className='social-item'>
                 <a href='https://www.instagram.com' target='_blank' className='social instagram' />

@@ -10,7 +10,7 @@ export default class Home extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      currentCity: '',
+      currentCity: 'Київ',
       resources: [
         {
           logoUrl: 'https://i.imgur.com/CcVQDt2.png?1',
@@ -66,6 +66,8 @@ export default class Home extends Component {
           return {
             currentCity: prevState.cities[index].value
           }
+        }, () => {
+          this.getResources(this.state.currentCity)
         })
       }
     })
@@ -93,6 +95,7 @@ export default class Home extends Component {
     city = city || 'any'
     API.getResources(city)
       .then((resources) => {
+        console.log(111111, resources)
         if (resources) {
           this.setState({resources})
         }

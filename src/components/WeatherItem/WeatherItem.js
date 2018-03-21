@@ -10,6 +10,7 @@ export default class WeatherItem extends Component {
     super(props)
     this.state = {
       commentsIsOpen: false,
+      commentsSectionClass: 'close',
       fakeComments: [
         {
           userAvatar: 'https://scontent.fkbp1-1.fna.fbcdn.net/v/t1.0-9/20841064_466384913727894_9002602640872322003_n.jpg?oh=85dff90bdff449d6e3c01fd9ff33ebf1&oe=5B345BEB',
@@ -33,11 +34,18 @@ export default class WeatherItem extends Component {
     this.toggleComments = this.toggleComments.bind(this)
   }
   toggleComments () {
-    // if (this.state.commentsIsOpen) {
-    //   let commentsSection = document.getElementsByClassName()
-    // }
     this.setState((prevState) => {
       return {commentsIsOpen: !prevState.commentsIsOpen}
+    }, () => {
+      if (this.state.commentsIsOpen) {
+        this.setState({commentsSectionClass: 'open'})
+      } else {
+        this.setState({commentsSectionClass: 'hide'}, () => {
+          setTimeout(() => {
+            this.setState({commentsSectionClass: 'close'})
+          }, 400)
+        })
+      }
     })
   }
 
@@ -59,10 +67,10 @@ export default class WeatherItem extends Component {
                 resource={this.props.item._id}
                 currentCity={this.props.currentCity}
               />
-              <button className={`open-comments-btn ${this.state.commentsIsOpen ? 'active' : ''}`} onClick={this.toggleComments}>Comments</button>
+              <button className={`open-comments-btn ${this.state.commentsIsOpen ? 'active' : ''}`} onClick={this.toggleComments}>Коментарі</button>
             </div>
           </div>
-          <CommentsSection className={`comments-container ${this.state.commentsIsOpen ? 'open' : 'close'}`} comments={this.state.fakeComments} />
+          <CommentsSection className={`comments-container ${this.state.commentsSectionClass}`} comments={this.state.fakeComments} />
         </div>
       </div>
     )

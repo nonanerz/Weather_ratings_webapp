@@ -70,7 +70,7 @@ export default class CommentsSection extends Component {
       <div className={this.props.className}>
         <div className='comment-input-container'>
           <TextArea
-            placeholder='Comment..'
+            placeholder='Ваш коментар..'
             value={this.state.value}
             change={this.changeCommentsText}
             className='comment-field'
@@ -78,7 +78,7 @@ export default class CommentsSection extends Component {
           <button
             className={`submit-comment-btn ${!this.state.value ? 'disabled' : ''}`}
             disabled={!this.state.value}
-            onClick={this.clickOnSubmitButton}>Submit</button>
+            onClick={this.clickOnSubmitButton}>Відправити</button>
         </div>
         <div className='comments-scroll-container'>
           <ul className='comment-wrapper'>

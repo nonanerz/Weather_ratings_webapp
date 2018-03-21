@@ -43,7 +43,7 @@ export default class API {
       })
   }
   static getUserLocation () {
-    return axios('http://ip-api.com/json', {
+    return axios('https://ipapi.co/json/', {
       method: 'get'
     })
       .then(response => {
