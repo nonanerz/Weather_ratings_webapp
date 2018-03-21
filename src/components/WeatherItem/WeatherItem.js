@@ -33,6 +33,9 @@ export default class WeatherItem extends Component {
     this.toggleComments = this.toggleComments.bind(this)
   }
   toggleComments () {
+    // if (this.state.commentsIsOpen) {
+    //   let commentsSection = document.getElementsByClassName()
+    // }
     this.setState((prevState) => {
       return {commentsIsOpen: !prevState.commentsIsOpen}
     })

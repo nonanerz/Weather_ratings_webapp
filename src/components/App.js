@@ -7,6 +7,7 @@ import API from '../services/api'
 
 // router
 import {BrowserRouter} from 'react-router-dom'
+import {Switch, Route} from 'react-router'
 
 // components
 import Header from './Header/Header'
@@ -14,18 +15,18 @@ import Footer from './Footer/Footer'
 import Home from './pages/Home/HomeContainer'
 import SignInPopup from './SignInPopup/SignInPopupContainer'
 
-// const NotFound = () => {
-//   return (
-//     <Route render={({staticContext}) => {
-//       if (staticContext) {
-//         staticContext.status = 404
-//       }
-//       return (<div>
-//         <h1>Sorry, can’t find that.</h1>
-//       </div>)
-//     }} />
-//   )
-// }
+const NotFound = () => {
+  return (
+    <Route render={({staticContext}) => {
+      if (staticContext) {
+        staticContext.status = 404
+      }
+      return (<div>
+        <h1>Sorry, can’t find that.</h1>
+      </div>)
+    }} />
+  )
+}
 
 class App extends Component {
   constructor (props) {
@@ -61,7 +62,10 @@ class App extends Component {
       <BrowserRouter>
         <div className='App'>
           <Header />
-          <Home />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route component={NotFound} />
+          </Switch>
           <Footer />
           {this.props.SignInPopupShow && <SignInPopup />}
         </div>

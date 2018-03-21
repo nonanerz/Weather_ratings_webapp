@@ -47,6 +47,7 @@ export default class CommentsSection extends Component {
 
   submit (userData) {
     if (this.state.value) {
+      userData.text = this.state.value
       console.log(userData)
       // let commentData = {
       //   userName: userData.name,
