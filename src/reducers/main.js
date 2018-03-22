@@ -5,7 +5,7 @@ const REDUCER = 'MAIN'
 const defaultState = {
   SignInPopupShow: false,
   SignInPopupContent: {},
-  region: ''
+  region: 71
 }
 
 export default (state = defaultState, action) => {

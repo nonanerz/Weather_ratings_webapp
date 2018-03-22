@@ -19,12 +19,22 @@ footer {
         }
         a.social {
           display: inline-block;
+          position: relative;
           width: 30px;
           height: 30px;
-          &.instagram {
+          &:after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          &.instagram:after {
             background: url('../assets/images/social-icons/instagram.svg') no-repeat;
           }
-          &.facebook {
+          &.facebook:after {
             background: url('../assets/images/social-icons/facebook.svg') no-repeat;
           }
         }

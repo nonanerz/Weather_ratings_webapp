@@ -8,10 +8,10 @@ export default class Footer extends Component {
           <div className='social-links-container'>
             <ul className='social-links-wrapper'>
               <li className='social-item'>
-                <a href='https://www.instagram.com' target='_blank' className='social instagram' />
+                <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' className='social instagram' />
               </li>
               <li className='social-item'>
-                <a href='https://www.facebook.com' target='_blank' className='social facebook' />
+                <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer' className='social facebook' />
               </li>
             </ul>
           </div>

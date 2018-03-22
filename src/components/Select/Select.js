@@ -5,7 +5,8 @@ export default class Select extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isOpen: false
+      isOpen: false,
+      optionWrapperClass: 'close'
     }
     this.handleSelect = this.handleSelect.bind(this)
     this.handleClick = this.handleClick.bind(this)
@@ -25,6 +26,12 @@ export default class Select extends Component {
     if (!this.isDescendant(event.target)) {
       this.setState({
         isOpen: false
+      }, () => {
+        this.setState({optionWrapperClass: 'hide'}, () => {
+          setTimeout(() => {
+            this.setState({optionWrapperClass: 'close'})
+          }, 200)
+        })
       })
     }
   }
@@ -42,14 +49,22 @@ export default class Select extends Component {
     if (!this.props.disabled) {
       this.setState(prevState => {
         return {isOpen: !prevState.isOpen}
+      }, () => {
+        if (this.state.isOpen) {
+          this.setState({optionWrapperClass: 'open'})
+        } else {
+          this.setState({optionWrapperClass: 'hide'}, () => {
+            setTimeout(() => {
+              this.setState({optionWrapperClass: 'close'})
+            }, 200)
+          })
+        }
       })
     }
   }
   handleSelect (e) {
     if (!this.props.disabled) {
-      this.setState({
-        isOpen: !this.state.isOpen
-      })
+      this.toggleSelect()
       this.props.selectFunction(e.target.dataset.value)
     }
   }
@@ -70,14 +85,14 @@ export default class Select extends Component {
           <span onClick={this.toggleSelect} className='clickable' />
         </div>
         <ul
-          className={`option-wrapper ${this.state.isOpen ? 'open' : ''} ${this.props.className || ''} ${this.props.scroll && 'scroll'}`}>
+          className={`option-wrapper ${this.state.optionWrapperClass} ${this.props.className || ''} ${this.props.scroll && 'scroll'}`}>
           {
             this.props.items.map((el, i) => {
               return (
                 <li
                   key={i}
                   data-value={el.value}
-                  className={`option ${el.disabled ? 'disabled' : ''}`}
+                  className={`option ${el.value === this.props.value ? 'active' : ''}`}
                   onClick={el.disabled ? () => {} : this.handleSelect}>
                   {el.value}
                 </li>

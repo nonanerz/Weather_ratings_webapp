@@ -21,13 +21,23 @@ footer .social-links-container .social-links-wrapper .social-item:last-child {
 
 footer .social-links-container .social-links-wrapper .social-item a.social {
   display: inline-block;
+  position: relative;
   width: 30px;
   height: 30px; }
 
-footer .social-links-container .social-links-wrapper .social-item a.social.instagram {
+footer .social-links-container .social-links-wrapper .social-item a.social:after {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+footer .social-links-container .social-links-wrapper .social-item a.social.instagram:after {
   background: url("../assets/images/social-icons/instagram.svg") no-repeat; }
 
-footer .social-links-container .social-links-wrapper .social-item a.social.facebook {
+footer .social-links-container .social-links-wrapper .social-item a.social.facebook:after {
   background: url("../assets/images/social-icons/facebook.svg") no-repeat; }
 
 footer .copyright-container {

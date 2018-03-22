@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-// import API from '../../../services/api'
+import API from '../../../services/api'
 
 // Components
 import TextArea from '../../TextArea/TextArea'
@@ -20,6 +20,7 @@ export default class CommentsSection extends Component {
 
   componentWillReceiveProps (nextProps) {
     if (nextProps.comments.length !== this.state.comments.length) {
+      console.log(nextProps.comments)
       this.setState({
         comments: nextProps.comments
       })
@@ -47,17 +48,18 @@ export default class CommentsSection extends Component {
 
   submit (userData) {
     if (this.state.value) {
-      userData.text = this.state.value
-      console.log(userData)
-      // let commentData = {
-      //   userName: userData.name,
-      //   avatar: userData.userAvatar,
-      //   text: this.state.value
-      // }
-      // API.postComment(commentData)
-      //   .then((res) => {
-      //     console.log(22222, res)
-      //   })
+      let commentData = {
+        userName: userData.userName,
+        userAvatar: userData.userAvatar,
+        comment: this.state.value,
+        resource: this.props.resource
+      }
+      API.postComment(commentData)
+        .then((res) => {
+          if (res) {
+            this.props.addComment(res)
+          }
+        })
     }
   }
 
@@ -80,13 +82,13 @@ export default class CommentsSection extends Component {
             disabled={!this.state.value}
             onClick={this.clickOnSubmitButton}>Відправити</button>
         </div>
-        <div className='comments-scroll-container'>
+        <div className={`comments-scroll-container ${this.state.comments.length > 0 ? 'withComment' : ''}`}>
           <ul className='comment-wrapper'>
             {this.state.comments.map((item, i) => {
               return (
                 <li key={`comment-${i + 1}`} className='comment-item'>
                   <div className='avatar-container'>
-                    <img src={item.userAvatar} />
+                    <img src={item.userAvatar} alt='avatar' />
                   </div>
                   <div className='comment-data-container'>
                     <p className='user-name'>{item.userName}</p>

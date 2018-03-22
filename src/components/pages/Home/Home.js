@@ -95,7 +95,6 @@ export default class Home extends Component {
     city = city || 'any'
     API.getResources(city)
       .then((resources) => {
-        console.log(111111, resources)
         if (resources) {
           this.setState({resources})
         }

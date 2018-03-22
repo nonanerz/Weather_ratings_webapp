@@ -1,11 +1,13 @@
 @import "../../theme/variables.scss";
 
 header {
+  position: relative;
   padding: 50px 0;
   background: #2a2f27 url('../assets/images/banner.jpg') no-repeat;
   background-size: cover;
   .logo {
     text-align: center;
+    transition: all 0.3s ease;
     a {
 
     }
@@ -28,5 +30,12 @@ header {
       font-size: 20px;
       color: rgba(255,255,255,.5);
     }
+  }
+  .blur-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    filter: blur(3px);
   }
 }

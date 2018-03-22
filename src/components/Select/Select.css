@@ -9,11 +9,14 @@
   display: block;
   width: 100%;
   position: relative;
-  padding: 12px 35px 9px 15px;
+  padding: 8px 35px 9px 15px;
   border-radius: 4px;
   border: 1px solid #cecece;
   background-color: #fbfbfb;
-  cursor: pointer; }
+  cursor: pointer;
+  font: normal 18px "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #282e3f; }
 
 .select-container .select-input-container .clickable {
   display: block;
@@ -25,21 +28,48 @@
   background: transparent;
   cursor: pointer; }
 
-.select-container .option-wrapper {
-  display: none;
-  width: 100%;
+.select-container .select-input-container .clickable:after {
+  content: '';
+  display: inline-block;
   position: absolute;
-  padding: 8px 16px 20px 13px;
-  z-index: 3;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed rgba(51, 51, 51, 0.6);
+  border-top: 4px solid rgba(51, 51, 51, 0.6);
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  top: 19px;
+  right: 16px; }
+
+.select-container .option-wrapper {
+  position: absolute;
   top: 45px;
   left: 0;
+  width: 100%;
+  padding: 8px 16px 20px 13px;
+  z-index: 3;
   border-radius: 5px;
   border: 1px solid #d7d7d7;
   background-color: #f8f8f8;
-  cursor: pointer; }
+  cursor: pointer;
+  font: normal 18px "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #282e3f;
+  transition: opacity 0.2s ease;
+  opacity: 0; }
 
 .select-container .option-wrapper.open {
-  display: block; }
+  opacity: 1; }
+
+.select-container .option-wrapper.close {
+  top: -9999px;
+  left: -9999px;
+  opacity: 0; }
+
+.select-container .option-wrapper.hide {
+  opacity: 0; }
 
 .select-container .option-wrapper.scroll {
   overflow-y: scroll;
@@ -52,11 +82,11 @@
 .select-container .option-wrapper .option {
   margin-top: 3px;
   padding: 3px 7px;
-  color: #000000;
+  color: #282e3f;
   line-height: 31px; }
 
-.select-container .option-wrapper .option.disabled {
-  opacity: 0.8; }
+.select-container .option-wrapper .option.active {
+  color: #696969; }
 
 .select-container .option-wrapper .option:first-child {
   margin-top: 0; }

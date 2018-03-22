@@ -54,8 +54,8 @@ class App extends Component {
     }
     API.getUserLocation()
       .then((location) => {
-        console.log(location)
-        this.props.changeStateProp('region', location.region_code, 'main')
+        let region = location && location.region_code ? location.region_code : 71
+        this.props.changeStateProp('region', region, 'main')
       })
   }
   render () {

@@ -5,12 +5,11 @@ export default class Header extends Component {
     return (
       <header className='header-section'>
         <div className='container'>
-          <div className='logo'>
-            <img src={require('../../assets/images/wr-white.png')} />
-            {/* <h1>wheather</h1> */}
-            {/* <span>rate</span> */}
+          <div className='logo blur' ref={logo => { this.logo = logo }}>
+            <img src={require('../../assets/images/wr-white.png')} alt='weather' />
           </div>
         </div>
+        <span className='blur-container' />
       </header>
     )
   }

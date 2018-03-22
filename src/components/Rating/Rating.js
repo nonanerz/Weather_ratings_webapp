@@ -32,7 +32,9 @@ export default class Rating extends Component {
     userData.city = this.props.currentCity
     API.postRating(userData)
       .then((res) => {
-        this.updateRating(rating)
+        if (res) {
+          this.updateRating(rating)
+        }
       })
   }
 
