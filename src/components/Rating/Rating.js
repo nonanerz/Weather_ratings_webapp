@@ -13,7 +13,11 @@ export default class Rating extends Component {
     this.setRating = this.setRating.bind(this)
     this.updateRating = this.updateRating.bind(this)
   }
-
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.rate !== this.state.rate) {
+      this.updateRating(nextProps.rate)
+    }
+  }
   changeRate (newRating) {
     let SignInPopupContent = {
       title: 'Rating',
@@ -29,10 +33,17 @@ export default class Rating extends Component {
   setRating (rating, userData) {
     userData.rating = rating
     userData.resource = this.props.resource
-    userData.city = this.props.currentCity
+    userData.city = parseFloat(this.props.region)
+    userData.username = userData.userName
     API.postRating(userData)
       .then((res) => {
         if (res) {
+          // API.getResource(this.props.resource)
+          //   .then((res) => {
+          //     if (res) {
+          //       this.props.updateResource(res, this.props.indexOfRecource)
+          //     }
+          //   })
           this.updateRating(rating)
         }
       })

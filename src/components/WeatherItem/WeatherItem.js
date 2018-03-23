@@ -13,29 +13,11 @@ export default class WeatherItem extends Component {
       commentsIsOpen: false,
       commentsSectionClass: 'close',
       commentsInProgress: false,
-      fakeComments: [
-        {
-          userAvatar: 'https://scontent.fkbp1-1.fna.fbcdn.net/v/t1.0-9/20841064_466384913727894_9002602640872322003_n.jpg?oh=85dff90bdff449d6e3c01fd9ff33ebf1&oe=5B345BEB',
-          text: 'Text comment text for testing of test lorem testing of test on test',
-          userName: 'Daniel Yarmolenko',
-          createAt: new Date()
-        },
-        {
-          userAvatar: 'https://scontent.fkbp1-1.fna.fbcdn.net/v/t1.0-9/20841064_466384913727894_9002602640872322003_n.jpg?oh=85dff90bdff449d6e3c01fd9ff33ebf1&oe=5B345BEB',
-          text: 'Text comment text for testing of test lorem testing of test on test',
-          userName: 'Daniel Yarmolenko',
-          createAt: new Date()
-        },
-        {
-          userAvatar: 'https://scontent.fkbp1-1.fna.fbcdn.net/v/t1.0-9/20841064_466384913727894_9002602640872322003_n.jpg?oh=85dff90bdff449d6e3c01fd9ff33ebf1&oe=5B345BEB',
-          text: 'Text comment text for testing of test lorem testing of test on test',
-          userName: 'Daniel Yarmolenko',
-          createAt: new Date()
-        }],
       comments: []
     }
     this.toggleComments = this.toggleComments.bind(this)
     this.getComments = this.getComments.bind(this)
+    this.addComment = this.addComment.bind(this)
   }
 
   addComment (comment) {
@@ -74,14 +56,14 @@ export default class WeatherItem extends Component {
         if (this.state.comments.length > 0) {
           this.toggleComments()
         } else if (this.state.comments.length === 0) {
-          API.getComments(1)
+          API.getComments(this.props.item._id)
             .then((comments) => {
               if (comments) {
                 this.setState({comments}, () => {
                   this.toggleComments()
                 })
               } else {
-                this.setState({comments: this.state.fakeComments || []}, () => {
+                this.setState({comments: []}, () => {
                   this.toggleComments()
                 })
               }
@@ -95,7 +77,7 @@ export default class WeatherItem extends Component {
     return (
       <div className='weather-item-container'>
         <div className='img-container'>
-          <img src={this.props.item.logoUrl} alt='Resource logo' />
+          <img src={`https://admin.weather-rate.me/${this.props.item.file}`} alt='Resource logo' />
         </div>
         <div className='data-container'>
           <div className='data-wrapper'>
@@ -104,10 +86,12 @@ export default class WeatherItem extends Component {
             <a className='weather-link' href={this.props.item.url} target='_blank'>Link</a>
             <div className='rate-container'>
               <Rating
-                rate={this.props.item.rating[0].rate}
-                count={this.props.item.rating[0].count}
+                rate={this.props.item.rating.length ? this.props.item.rating[0].average_transaction_amount : 0}
+                count={this.props.item.rating.length ? this.props.item.rating[0].count : 0}
                 resource={this.props.item._id}
-                currentCity={this.props.currentCity}
+                region={this.props.currentCity}
+                updateResource={this.props.updateResource}
+                indexOfRecource={this.props.index}
               />
               <button className={`open-comments-btn ${this.state.commentsIsOpen ? 'active' : ''}`} onClick={this.getComments}>Коментарі</button>
             </div>
@@ -129,7 +113,7 @@ WeatherItem.defaultProps = {
     image: '',
     description: '',
     title: '',
-    rate: null
+    rating: null
   }
 }
 WeatherItem.defaultType = {

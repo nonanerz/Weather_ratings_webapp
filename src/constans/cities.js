@@ -1,18 +1,18 @@
 export const CITIES = [
   {
     value: 'Черкаси',
-    region: '71'
+    region: 71
   },
   {
     value: 'Київ',
-    region: '30'
+    region: 30
   },
   {
     value: 'Львів',
-    region: '46'
+    region: 46
   },
   {
     value: 'Харьків',
-    region: '63'
+    region: 63
   }
 ]

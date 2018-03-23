@@ -49,28 +49,29 @@ export default class CommentsSection extends Component {
   submit (userData) {
     if (this.state.value) {
       let commentData = {
-        userName: userData.userName,
+        username: userData.userName,
         userAvatar: userData.userAvatar,
         comment: this.state.value,
         resource: this.props.resource
       }
       API.postComment(commentData)
         .then((res) => {
-          if (res) {
-            this.props.addComment(res)
+          if (res && res.comment) {
+            this.props.addComment(res.comment)
           }
         })
     }
   }
 
-  getCommentsDate (date) {
+  getCommentsDate (value) {
+    let date = new Date(value)
     return `${date.getUTCDate()}.${date.getUTCMonth() + 1}.${date.getUTCFullYear()}`
   }
 
   render () {
     return (
       <div className={this.props.className}>
-        <div className='comment-input-container'>
+        <div className={`comment-input-container ${this.state.comments.length <= 1 ? 'withoutComments' : ''}`}>
           <TextArea
             placeholder='Ваш коментар..'
             value={this.state.value}
@@ -82,7 +83,7 @@ export default class CommentsSection extends Component {
             disabled={!this.state.value}
             onClick={this.clickOnSubmitButton}>Відправити</button>
         </div>
-        <div className={`comments-scroll-container ${this.state.comments.length > 0 ? 'withComment' : ''}`}>
+        <div className={`comments-scroll-container ${this.state.comments.length > 1 ? 'withComments' : ''}`}>
           <ul className='comment-wrapper'>
             {this.state.comments.map((item, i) => {
               return (
@@ -91,9 +92,9 @@ export default class CommentsSection extends Component {
                     <img src={item.userAvatar} alt='avatar' />
                   </div>
                   <div className='comment-data-container'>
-                    <p className='user-name'>{item.userName}</p>
-                    <p className='create-at'>{this.getCommentsDate(item.createAt)}</p>
-                    <p className='comment-text'>{item.text}</p>
+                    <p className='user-name'>{item.username}</p>
+                    {/* <p className='create-at'>{this.getCommentsDate(item.createAt)}</p> */}
+                    <p className='comment-text'>{item.comment}</p>
                   </div>
                 </li>
               )

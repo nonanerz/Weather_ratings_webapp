@@ -4,8 +4,8 @@ import {API_HOST} from '../config'
 axios.defaults.baseURL = API_HOST
 
 export default class API {
-  static getResources (city = 'any') {
-    return axios(`/resources/${city}`, {
+  static getResources (region = 'any') {
+    return axios(`/resources/${region}`, {
       method: 'get',
       headers: {
         'Content-Type': 'application/json'
@@ -13,6 +13,26 @@ export default class API {
     })
       .then(response => {
         return response.data.resources // return response;
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response.data)
+          console.log(error.response.status)
+          console.log(error.response.headers)
+        } else {
+          console.log('Strange Error', error.message)
+        }
+      })
+  }
+  static getResource (id) {
+    return axios(`/resource/${id}`, {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        return response.data.resource // return response;
       })
       .catch((error) => {
         if (error.response) {

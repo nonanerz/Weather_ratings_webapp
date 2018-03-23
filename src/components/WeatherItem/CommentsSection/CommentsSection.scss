@@ -23,14 +23,16 @@
   }
   .comment-input-container {
     margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d2d7de;
+    &.withoutComments {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d2d7de;
+    }
   }
 }
 .comments-scroll-container {
   resize: none;
   transition: all $resize-transition-time linear;
-  &.withComment {
+  &.withComments {
     overflow-y: scroll;
     height: 200px;
   }
