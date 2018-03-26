@@ -122,7 +122,7 @@ export default class CommentsSection extends Component {
             onClick={this.clickOnSubmitButton}>Відправити</button>
         </div>
         <div
-          className={`comments-scroll-container ${this.state.comments.length > 1 ? 'withComments' : ''}`}
+          className={`comments-scroll-container ${this.state.comments.length > 4 ? 'withComments' : ''}`}
           onScroll={this.onScrollComments}
         >
           <ul className='comment-wrapper'>

@@ -35,11 +35,11 @@
   &.withComments {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 200px;
+    height: 400px;
   }
   @media screen and (max-width: $small) {
     &.withComment {
-      height: 300px;
+      height: 500px;
     }
   }
   &::-webkit-scrollbar {
@@ -91,7 +91,8 @@
       min-height: 50px;
       background: #f2f2f2;
       border-radius: 50%;
-      border: 2px solid $accent-color;
+      box-shadow: 1px 1px 3px #000;
+      //border: 2px solid $accent-color;
       overflow: hidden;
       img {
         max-width: 100%;

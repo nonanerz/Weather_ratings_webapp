@@ -19,6 +19,7 @@ export default class Home extends Component {
     this.selectFunction = this.selectFunction.bind(this)
     this.getResources = this.getResources.bind(this)
     this.updateResource = this.updateResource.bind(this)
+    this.sort = this.sort.bind(this)
   }
   componentWillMount () {
     this.setState({
@@ -67,9 +68,17 @@ export default class Home extends Component {
     API.getResources(region)
       .then((resources) => {
         if (resources) {
-          this.setState({resources})
+          this.setState({resources: this.sort(resources)})
         }
       })
+  }
+
+  sort (resources) {
+    return resources.sort((prevItem, nextItem) => {
+      let prev = prevItem.rating.length ? prevItem.rating[0].average_transaction_amount : 0
+      let next = nextItem.rating.length ? nextItem.rating[0].average_transaction_amount : 0
+      return prev - next
+    }).reverse()
   }
   updateResource (newData, index) {
     this.setState({
