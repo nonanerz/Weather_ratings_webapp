@@ -47,6 +47,14 @@
       font: $common-font-bold;
       font-size: 35px;
       color: $main-font-color;
+      a {
+        color: $main-font-color;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+          color: rgb(77, 87, 117);
+        }
+      }
     }
     .weather-description {
       font: $common-font;

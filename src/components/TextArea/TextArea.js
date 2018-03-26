@@ -15,7 +15,7 @@ export default class TextArea extends Component {
     this.setState({
       value: nextProps.value
     }, () => {
-      this.handleHeight(nextProps)
+      this.handleHeight(nextProps.value)
     })
   }
 

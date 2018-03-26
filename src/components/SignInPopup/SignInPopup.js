@@ -1,6 +1,7 @@
 /* global FB */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import {setUserToLocaleStorage} from '../../utils/main'
 
 export default class SignInPopup extends Component {
   constructor (props) {
@@ -16,6 +17,7 @@ export default class SignInPopup extends Component {
           userData.userId = response.id
           userData.userName = response.name
           userData.userAvatar = response.picture.data.url
+          setUserToLocaleStorage(userData)
           this.close(userData)
         })
       } else {
@@ -26,6 +28,7 @@ export default class SignInPopup extends Component {
               userData.userId = response.id
               userData.userName = response.name
               userData.userAvatar = response.picture.data.url
+              setUserToLocaleStorage(userData)
               this.close(userData)
             })
           } else {

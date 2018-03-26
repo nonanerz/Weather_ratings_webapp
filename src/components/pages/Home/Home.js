@@ -34,7 +34,7 @@ export default class Home extends Component {
         this.setState((prevState) => {
           return {
             currentCity: prevState.cities[index].value,
-            currentRegion: prevState.cities[index].region
+            currentRegion: prevState.cities[index].number
           }
         }, () => {
           this.getResources(this.state.currentRegion)
@@ -46,7 +46,7 @@ export default class Home extends Component {
     if (nextProps.region !== this.props.region || !this.state.currentRegion) {
       let index = false
       for (let i = 0; i < this.state.cities.length; i++) {
-        if (this.state.cities[i].region === nextProps.region) {
+        if (this.state.cities[i].region === nextProps.region || this.state.cities[i].number === nextProps.region) {
           index = i
         }
       }
@@ -54,7 +54,7 @@ export default class Home extends Component {
         this.setState((prevState) => {
           return {
             currentCity: prevState.cities[index].value,
-            currentRegion: prevState.cities[index].region
+            currentRegion: prevState.cities[index].number
           }
         }, () => {
           this.getResources(this.state.currentRegion)
@@ -67,7 +67,6 @@ export default class Home extends Component {
     API.getResources(region)
       .then((resources) => {
         if (resources) {
-          console.log(resources)
           this.setState({resources})
         }
       })
@@ -87,14 +86,20 @@ export default class Home extends Component {
       }
     }
     if (index !== false) {
-      this.props.changeStateProp('region', this.state.cities[index].region, 'main')
+      this.props.changeStateProp('region', this.state.cities[index].number, 'main')
     }
   }
   render () {
     return (
       <section className='home-section'>
         <div className='container'>
-          <Select selectFunction={this.selectFunction} items={this.state.cities} value={this.state.currentCity} />
+          <Select
+            selectFunction={this.selectFunction}
+            items={this.state.cities}
+            value={this.state.currentCity}
+            scroll
+            label='Рейтинг у'
+          />
           {
             this.state.resources.map((item, i) => {
               return (

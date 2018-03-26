@@ -42,6 +42,12 @@
       font: bold 18px "Open Sans", sans-serif;
       font-size: 35px;
       color: #282e3f; }
+      .weather-item-container .data-container .weather-title a {
+        color: #282e3f;
+        text-decoration: none;
+        transition: color 0.2s ease; }
+        .weather-item-container .data-container .weather-title a:hover {
+          color: #4d5775; }
     .weather-item-container .data-container .weather-description {
       font: normal 18px "Open Sans", sans-serif;
       color: #282e3f; }

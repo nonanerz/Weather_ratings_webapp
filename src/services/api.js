@@ -24,8 +24,8 @@ export default class API {
         }
       })
   }
-  static getResource (id) {
-    return axios(`/resource/${id}`, {
+  static getResource (region = 'any', id) {
+    return axios(`/resources/${region}/${id}`, {
       method: 'get',
       headers: {
         'Content-Type': 'application/json'
@@ -106,15 +106,15 @@ export default class API {
         }
       })
   }
-  static getComments (id) {
-    return axios(`/comments/${id}`, {
+  static getComments (id, page = 1) {
+    return axios(`/comments/${id}?page=${page}`, {
       method: 'get',
       headers: {
         'Content-Type': 'application/json'
       }
     })
       .then(response => {
-        return response.data.comments.reverse() // return response;
+        return response.data // return response;
       })
       .catch((error) => {
         if (error.response) {

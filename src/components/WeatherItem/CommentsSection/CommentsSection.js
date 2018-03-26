@@ -4,26 +4,48 @@ import API from '../../../services/api'
 
 // Components
 import TextArea from '../../TextArea/TextArea'
+import {getUserFromLocaleStorage} from '../../../utils/main'
 
 export default class CommentsSection extends Component {
   constructor (props) {
     super(props)
     this.state = {
       value: '',
-      comments: []
+      comments: [],
+      currentPage: 1,
+      limitOfComments: 5,
+      totalComments: 0
     }
     this.changeCommentsText = this.changeCommentsText.bind(this)
     this.clickOnSubmitButton = this.clickOnSubmitButton.bind(this)
     this.submit = this.submit.bind(this)
     this.getCommentsDate = this.getCommentsDate.bind(this)
+    this.onScrollComments = this.onScrollComments.bind(this)
+    this.getComments = this.getComments.bind(this)
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.comments.length !== this.state.comments.length) {
-      console.log(nextProps.comments)
-      this.setState({
-        comments: nextProps.comments
-      })
+  componentWillMount () {
+    this.getComments(this.props.resource, 1, true)
+  }
+
+  addComment (comment) {
+    let newComments = this.state.comments.slice()
+    newComments.unshift(comment)
+    this.setState({comments: newComments})
+  }
+
+  getComments (id, page) {
+    if (page === 1 || page <= Math.ceil(this.state.totalComments / this.state.limitOfComments)) {
+      API.getComments(id, page)
+        .then((data) => {
+          if (data.comments) {
+            this.setState({
+              comments: this.state.comments.concat(data.comments),
+              totalComments: data.count,
+              currentPage: page
+            })
+          }
+        })
     }
   }
 
@@ -33,16 +55,23 @@ export default class CommentsSection extends Component {
 
   clickOnSubmitButton () {
     if (this.state.value) {
-      let SignInPopupContent = {
-        title: 'Comment',
-        description: 'Please sign in to continue',
-        close: true,
-        callback: (userData) => {
-          this.submit(userData)
-        }
-      }
-      this.props.changeStateProp('SignInPopupContent', SignInPopupContent, 'main')
-      this.props.changeStateProp('SignInPopupShow', true, 'main')
+      getUserFromLocaleStorage()
+        .then((user) => {
+          if (user) {
+            this.submit(user)
+          } else {
+            let SignInPopupContent = {
+              title: 'Comment',
+              description: 'Please sign in to continue',
+              close: true,
+              callback: (userData) => {
+                this.submit(userData)
+              }
+            }
+            this.props.changeStateProp('SignInPopupContent', SignInPopupContent, 'main')
+            this.props.changeStateProp('SignInPopupShow', true, 'main')
+          }
+        })
     }
   }
 
@@ -57,7 +86,9 @@ export default class CommentsSection extends Component {
       API.postComment(commentData)
         .then((res) => {
           if (res && res.comment) {
-            this.props.addComment(res.comment)
+            this.addComment(res.comment)
+            this.props.addCommentsCount()
+            this.setState({value: ''})
           }
         })
     }
@@ -65,7 +96,14 @@ export default class CommentsSection extends Component {
 
   getCommentsDate (value) {
     let date = new Date(value)
-    return `${date.getUTCDate()}.${date.getUTCMonth() + 1}.${date.getUTCFullYear()}`
+    let month = date.getUTCMonth() + 1
+    return `${date.getUTCDate()}.${month < 10 ? `0${month}` : month}.${date.getUTCFullYear()}`
+  }
+
+  onScrollComments ({target}) {
+    if (target.scrollTop === target.scrollHeight - target.clientHeight) {
+      this.getComments(this.props.resource, this.state.currentPage + 1)
+    }
   }
 
   render () {
@@ -83,7 +121,10 @@ export default class CommentsSection extends Component {
             disabled={!this.state.value}
             onClick={this.clickOnSubmitButton}>Відправити</button>
         </div>
-        <div className={`comments-scroll-container ${this.state.comments.length > 1 ? 'withComments' : ''}`}>
+        <div
+          className={`comments-scroll-container ${this.state.comments.length > 1 ? 'withComments' : ''}`}
+          onScroll={this.onScrollComments}
+        >
           <ul className='comment-wrapper'>
             {this.state.comments.map((item, i) => {
               return (
@@ -93,7 +134,7 @@ export default class CommentsSection extends Component {
                   </div>
                   <div className='comment-data-container'>
                     <p className='user-name'>{item.username}</p>
-                    {/* <p className='create-at'>{this.getCommentsDate(item.createAt)}</p> */}
+                    {item.createdAt && <p className='create-at'>{this.getCommentsDate(item.createdAt)}</p>}
                     <p className='comment-text'>{item.comment}</p>
                   </div>
                 </li>

@@ -70,36 +70,42 @@ export default class Select extends Component {
   }
   render () {
     return (
-      <div
-        className='select-container'
-        ref={select => { this.select = select }}
-      >
-        <div className='select-input-container'>
-          <input
-            className='selected'
-            type='text'
-            value={this.props.value}
-            placeholder={this.props.placeholder}
-            disabled
-          />
-          <span onClick={this.toggleSelect} className='clickable' />
+      <div className='container-for-label'>
+        <span className='label'>{this.props.label}</span>
+        <div
+          className='select-container'
+          ref={select => {
+            this.select = select
+          }}
+        >
+          <div className='select-input-container'>
+            <input
+              className='selected'
+              type='text'
+              value={this.props.value}
+              placeholder={this.props.placeholder}
+              disabled
+            />
+            <span onClick={this.toggleSelect} className='clickable' />
+          </div>
+          <ul
+            className={`option-wrapper ${this.state.optionWrapperClass} ${this.props.className || ''} ${this.props.scroll && 'scroll'}`}>
+            {
+              this.props.items.map((el, i) => {
+                return (
+                  <li
+                    key={i}
+                    data-value={el.value}
+                    className={`option ${el.value === this.props.value ? 'active' : ''}`}
+                    onClick={el.disabled ? () => {
+                    } : this.handleSelect}>
+                    {el.value}
+                  </li>
+                )
+              })
+            }
+          </ul>
         </div>
-        <ul
-          className={`option-wrapper ${this.state.optionWrapperClass} ${this.props.className || ''} ${this.props.scroll && 'scroll'}`}>
-          {
-            this.props.items.map((el, i) => {
-              return (
-                <li
-                  key={i}
-                  data-value={el.value}
-                  className={`option ${el.value === this.props.value ? 'active' : ''}`}
-                  onClick={el.disabled ? () => {} : this.handleSelect}>
-                  {el.value}
-                </li>
-              )
-            })
-          }
-        </ul>
       </div>
     )
   }
@@ -109,6 +115,7 @@ Select.defaultProps = {
   selectFunction: () => {},
   items: [],
   value: '',
+  label: '',
   placeholder: '',
   scroll: false,
   className: '',
@@ -118,6 +125,7 @@ Select.defaultType = {
   selectFunction: PropTypes.func,
   items: PropTypes.array,
   value: PropTypes.string,
+  label: PropTypes.string,
   placeholder: PropTypes.string,
   scroll: PropTypes.boolean,
   className: PropTypes.string,

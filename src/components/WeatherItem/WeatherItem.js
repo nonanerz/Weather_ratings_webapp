@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import API from '../../services/api'
 
 // components
 import Rating from '../Rating/RatingContainer'
@@ -13,18 +12,19 @@ export default class WeatherItem extends Component {
       commentsIsOpen: false,
       commentsSectionClass: 'close',
       commentsInProgress: false,
-      comments: []
+      commentsCount: 0
     }
     this.toggleComments = this.toggleComments.bind(this)
-    this.getComments = this.getComments.bind(this)
-    this.addComment = this.addComment.bind(this)
+    this.addCommentsCount = this.addCommentsCount.bind(this)
   }
 
-  addComment (comment) {
-    let newComments = this.state.comments.slice()
-    newComments.unshift(comment)
-    this.setState({comments: newComments}, () => {
-      console.log(this.state.comments)
+  componentWillMount () {
+    this.setState({commentsCount: this.props.item.commentsCount})
+  }
+
+  addCommentsCount () {
+    this.setState((prevState) => {
+      return {commentsCount: ++prevState.commentsCount}
     })
   }
 
@@ -50,40 +50,16 @@ export default class WeatherItem extends Component {
     })
   }
 
-  getComments () {
-    if (!this.state.commentsInProgress) {
-      this.setState({commentsInProgress: true}, () => {
-        if (this.state.comments.length > 0) {
-          this.toggleComments()
-        } else if (this.state.comments.length === 0) {
-          API.getComments(this.props.item._id)
-            .then((comments) => {
-              if (comments) {
-                this.setState({comments}, () => {
-                  this.toggleComments()
-                })
-              } else {
-                this.setState({comments: []}, () => {
-                  this.toggleComments()
-                })
-              }
-            })
-        }
-      })
-    }
-  }
-
   render () {
     return (
       <div className='weather-item-container'>
-        <div className='img-container'>
+        <a className='img-container' href={this.props.item.url} target='_blank'>
           <img src={`https://admin.weather-rate.me/${this.props.item.file}`} alt='Resource logo' />
-        </div>
+        </a>
         <div className='data-container'>
           <div className='data-wrapper'>
-            <h2 className='weather-title'>{this.props.item.title}</h2>
+            <h2 className='weather-title'><a href={this.props.item.url} target='_blank'>{this.props.item.title}</a></h2>
             <p className='weather-description'>{this.props.item.description}</p>
-            <a className='weather-link' href={this.props.item.url} target='_blank'>Link</a>
             <div className='rate-container'>
               <Rating
                 rate={this.props.item.rating.length ? this.props.item.rating[0].average_transaction_amount : 0}
@@ -93,14 +69,13 @@ export default class WeatherItem extends Component {
                 updateResource={this.props.updateResource}
                 indexOfRecource={this.props.index}
               />
-              <button className={`open-comments-btn ${this.state.commentsIsOpen ? 'active' : ''}`} onClick={this.getComments}>Коментарі</button>
+              <button className={`open-comments-btn ${this.state.commentsIsOpen ? 'active' : ''}`} onClick={this.toggleComments}>{`Коментарі (${this.state.commentsCount})`}</button>
             </div>
           </div>
           <CommentsSection
             className={`comments-container ${this.state.commentsSectionClass}`}
-            comments={this.state.comments}
             resource={this.props.item._id}
-            addComment={this.addComment}
+            addCommentsCount={this.addCommentsCount}
           />
         </div>
       </div>

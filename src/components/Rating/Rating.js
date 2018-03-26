@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import StarRatings from 'react-star-ratings'
 import API from '../../services/api'
+import {getUserFromLocaleStorage} from '../../utils/main'
 
 export default class Rating extends Component {
   constructor (props) {
@@ -19,32 +20,39 @@ export default class Rating extends Component {
     }
   }
   changeRate (newRating) {
-    let SignInPopupContent = {
-      title: 'Rating',
-      description: 'Please sign in to continue',
-      close: true,
-      callback: (userData) => {
-        this.setRating(newRating, userData)
-      }
-    }
-    this.props.changeStateProp('SignInPopupContent', SignInPopupContent, 'main')
-    this.props.changeStateProp('SignInPopupShow', true, 'main')
+    getUserFromLocaleStorage()
+      .then((user) => {
+        if (user) {
+          this.setRating(newRating, user)
+        } else {
+          let SignInPopupContent = {
+            title: 'Rating',
+            description: 'Please sign in to continue',
+            close: true,
+            callback: (userData) => {
+              this.setRating(newRating, userData)
+            }
+          }
+          this.props.changeStateProp('SignInPopupContent', SignInPopupContent, 'main')
+          this.props.changeStateProp('SignInPopupShow', true, 'main')
+        }
+      })
   }
   setRating (rating, userData) {
     userData.rating = rating
     userData.resource = this.props.resource
-    userData.city = parseFloat(this.props.region)
+    userData.city = this.props.region
     userData.username = userData.userName
     API.postRating(userData)
       .then((res) => {
         if (res) {
-          // API.getResource(this.props.resource)
-          //   .then((res) => {
-          //     if (res) {
-          //       this.props.updateResource(res, this.props.indexOfRecource)
-          //     }
-          //   })
-          this.updateRating(rating)
+          API.getResource(this.props.region, this.props.resource)
+            .then((res) => {
+              if (res) {
+                this.props.updateResource(res, this.props.indexOfRecource)
+                this.updateRating(rating)
+              }
+            })
         }
       })
   }
