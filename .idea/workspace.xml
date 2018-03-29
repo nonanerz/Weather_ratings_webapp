@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85f6a0fe-eabf-440d-af88-badf7ebe63ec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AboutUs/AboutUs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ContactUs/ContactUs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ContactUs/ContactUs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Rating/Rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rating/Rating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextArea/TextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextArea/TextArea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/CommentsSection/CommentsSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeatherItem/WeatherItem.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home/Home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constans/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constans/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/general.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -108,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactUs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactUs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ContactUs/ContactUs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="231">
+              <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -132,7 +105,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/config/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -244,9 +217,9 @@
         <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.scss" />
         <option value="$PROJECT_DIR$/src/utils/main.js" />
         <option value="$PROJECT_DIR$/src/components/SignInPopup/SignInPopup.js" />
-        <option value="$PROJECT_DIR$/src/config/index.js" />
         <option value="$PROJECT_DIR$/src/services/api.js" />
         <option value="$PROJECT_DIR$/src/components/ContactUs/ContactUs.js" />
+        <option value="$PROJECT_DIR$/src/config/index.js" />
       </list>
     </option>
   </component>
@@ -290,24 +263,6 @@
               <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Weather_ratings_webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Weather_ratings_webapp" type="b2602c69:ProjectViewProjectNode" />
@@ -384,16 +339,15 @@
       <workItem from="1522132369130" duration="10780000" />
       <workItem from="1522218479536" duration="758000" />
       <workItem from="1522222987174" duration="6000" />
-      <workItem from="1522312955244" duration="1339000" />
+      <workItem from="1522312955244" duration="1848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130943000" />
+    <option name="totallyTimeSpent" value="131452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -777,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -796,11 +743,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ContactUs/ContactUs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="231">
+          <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
