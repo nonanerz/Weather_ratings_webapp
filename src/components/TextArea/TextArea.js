@@ -46,6 +46,7 @@ export default class TextArea extends Component {
           className={`textArea ${this.props.className || ''}`}
           placeholder={this.props.placeholder}
           style={{height: this.state.height + 'px'}}
+          name={this.props.name}
         />
       </div>
     )
@@ -56,11 +57,13 @@ TextArea.defaultProps = {
   change: () => {},
   value: '',
   placeholder: '',
-  className: ''
+  className: '',
+  name: ''
 }
 TextArea.defaultType = {
   change: PropTypes.func,
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  name: PropTypes.string
 }

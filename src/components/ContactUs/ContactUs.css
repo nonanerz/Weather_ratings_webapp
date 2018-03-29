@@ -1,0 +1,47 @@
+.contact-us-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f2f2f2; }
+  .contact-us-section h2 {
+    font: normal 18px "Open Sans", sans-serif;
+    font-size: 35px;
+    color: #282e3f;
+    margin-bottom: 20px; }
+  .contact-us-section .form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; }
+    .contact-us-section .form-container input {
+      padding: 10px 12px;
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 15px;
+      color: rgba(40, 46, 63, 0.811765);
+      margin-bottom: 20px;
+      border-radius: 3px;
+      border: 1px solid #d2d7de; }
+      .contact-us-section .form-container input.invalid {
+        border-color: rgba(233, 44, 21, 0.99); }
+    .contact-us-section .form-container .comment-field {
+      border: 1px solid #d2d7de; }
+      .contact-us-section .form-container .comment-field.invalid {
+        border-color: rgba(233, 44, 21, 0.99); }
+    .contact-us-section .form-container .submit-button {
+      align-self: flex-end;
+      width: 120px;
+      margin: 15px 0;
+      border: none;
+      background: #e95d3c;
+      padding: 8px 16px;
+      color: #fff;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 14px; }
+      .contact-us-section .form-container .submit-button:hover {
+        background: #de3d27; }
+      .contact-us-section .form-container .submit-button.disabled {
+        opacity: 0.8; }
+        .contact-us-section .form-container .submit-button.disabled:hover {
+          background: #e95d3c; }

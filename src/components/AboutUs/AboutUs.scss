@@ -1,0 +1,15 @@
+@import "../../theme/variables.scss";
+
+.about-us-section {
+  padding: 50px 0;
+  text-align: center;
+  h2 {
+    font: $common-font;
+    font-size: 35px;
+    color: $main-font-color;
+  }
+  p {
+    font: $common-font;
+    color: $main-font-color;
+  }
+}

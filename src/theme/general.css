@@ -414,7 +414,8 @@ footer {
   text-align: center; }
   footer .social-links-container {
     display: inline-block;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 30px; }
     footer .social-links-container .social-links-wrapper {
       margin-top: 10px;
       text-align: center; }
@@ -444,8 +445,66 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
     font-size: 11px; }
+
+.about-us-section {
+  padding: 50px 0;
+  text-align: center; }
+  .about-us-section h2 {
+    font: normal 18px "Open Sans", sans-serif;
+    font-size: 35px;
+    color: #282e3f; }
+  .about-us-section p {
+    font: normal 18px "Open Sans", sans-serif;
+    color: #282e3f; }
+
+.contact-us-section {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #f2f2f2; }
+  .contact-us-section h2 {
+    font: normal 18px "Open Sans", sans-serif;
+    font-size: 35px;
+    color: #282e3f;
+    margin-bottom: 20px; }
+  .contact-us-section .form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto; }
+    .contact-us-section .form-container input {
+      padding: 10px 12px;
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 15px;
+      color: rgba(40, 46, 63, 0.811765);
+      margin-bottom: 20px;
+      border-radius: 3px;
+      border: 1px solid #d2d7de; }
+      .contact-us-section .form-container input.invalid {
+        border-color: rgba(233, 44, 21, 0.99); }
+    .contact-us-section .form-container .comment-field {
+      border: 1px solid #d2d7de; }
+      .contact-us-section .form-container .comment-field.invalid {
+        border-color: rgba(233, 44, 21, 0.99); }
+    .contact-us-section .form-container .submit-button {
+      align-self: flex-end;
+      width: 120px;
+      margin: 15px 0;
+      border: none;
+      background: #e95d3c;
+      padding: 8px 16px;
+      color: #fff;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      font: normal 18px "Open Sans", sans-serif;
+      font-size: 14px; }
+      .contact-us-section .form-container .submit-button:hover {
+        background: #de3d27; }
+      .contact-us-section .form-container .submit-button.disabled {
+        opacity: 0.8; }
+        .contact-us-section .form-container .submit-button.disabled:hover {
+          background: #e95d3c; }
 
 .container-for-label {
   display: flex;
@@ -615,10 +674,10 @@ footer {
       transition: all 0.2s ease; }
       .weather-item-container .data-container .weather-link:hover {
         opacity: 1; }
-  .weather-item-container .rate-container {
+  .weather-item-container .rate-and-comments-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px; }
+    margin-top: 20px; }
   .weather-item-container .open-comments-btn {
     display: inline-block;
     padding: 2px;
@@ -789,8 +848,9 @@ footer {
   align-items: center;
   overflow: scroll; }
   .sign-in-popup-container .sign-in-popup {
+    max-width: 400px;
     position: relative;
-    padding: 50px;
+    padding: 50px 35px;
     margin: 0;
     text-align: center;
     border-radius: 20px;
@@ -838,8 +898,8 @@ footer {
   font-size: 15px;
   line-height: 25px; }
 
-.home-section {
-  padding: 50px 0; }
+.home-section .container.resources-list {
+  padding-bottom: 50px; }
 
 * {
   margin: 0;

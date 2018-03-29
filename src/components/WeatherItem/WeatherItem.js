@@ -60,7 +60,7 @@ export default class WeatherItem extends Component {
           <div className='data-wrapper'>
             <h2 className='weather-title'><a href={this.props.item.url} target='_blank'>{this.props.item.title}</a></h2>
             <p className='weather-description'>{this.props.item.description}</p>
-            <div className='rate-container'>
+            <div className='rate-and-comments-container'>
               <Rating
                 rate={this.props.item.rating.length ? this.props.item.rating[0].average_transaction_amount : 0}
                 count={this.props.item.rating.length ? this.props.item.rating[0].count : 0}

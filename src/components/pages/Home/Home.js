@@ -6,6 +6,8 @@ import update from 'immutability-helper'
 // components
 import Select from '../../Select/Select'
 import WeatherItem from '../../WeatherItem/WeatherItemContainer'
+import AboutUs from '../../AboutUs/AboutUs'
+import ContactUs from '../../ContactUs/ContactUs'
 
 export default class Home extends Component {
   constructor (props) {
@@ -101,7 +103,8 @@ export default class Home extends Component {
   render () {
     return (
       <section className='home-section'>
-        <div className='container'>
+        <AboutUs />
+        <div className='container resources-list'>
           <Select
             selectFunction={this.selectFunction}
             items={this.state.cities}
@@ -123,6 +126,7 @@ export default class Home extends Component {
             })
           }
         </div>
+        <ContactUs />
       </section>
     )
   }

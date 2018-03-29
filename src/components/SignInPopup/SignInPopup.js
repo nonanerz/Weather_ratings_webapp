@@ -1,7 +1,7 @@
 /* global FB */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {setUserToLocaleStorage} from '../../utils/main'
+import {setUserToSessionStorage} from '../../utils/main'
 
 export default class SignInPopup extends Component {
   constructor (props) {
@@ -13,22 +13,24 @@ export default class SignInPopup extends Component {
     FB.getLoginStatus((response) => {
       if (response.status === 'connected') {
         FB.api('/me', {fields: 'id,name,picture.width(500).height(500)'}, (response) => {
+          console.log(response)
           let userData = {}
           userData.userId = response.id
           userData.userName = response.name
           userData.userAvatar = response.picture.data.url
-          setUserToLocaleStorage(userData)
+          setUserToSessionStorage(userData)
           this.close(userData)
         })
       } else {
         FB.login((response) => {
           if (response.status === 'connected') {
             FB.api('/me', {fields: 'id,name,picture.width(500).height(500)'}, (response) => {
+              console.log(response)
               let userData = {}
               userData.userId = response.id
               userData.userName = response.name
               userData.userAvatar = response.picture.data.url
-              setUserToLocaleStorage(userData)
+              setUserToSessionStorage(userData)
               this.close(userData)
             })
           } else {
@@ -53,7 +55,7 @@ export default class SignInPopup extends Component {
           <button
             onClick={this.facebookLogin}
             className='facebook-button'
-          >Continue with Facebook</button>
+          >Продовжити з Facebook</button>
           <button onClick={this.close.bind(null, false)} className={`close-btn ${!this.props.SignInPopupContent.close ? 'hidden' : ''}`} />
         </div>
       </div>

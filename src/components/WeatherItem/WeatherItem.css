@@ -61,10 +61,10 @@
       transition: all 0.2s ease; }
       .weather-item-container .data-container .weather-link:hover {
         opacity: 1; }
-  .weather-item-container .rate-container {
+  .weather-item-container .rate-and-comments-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px; }
+    margin-top: 20px; }
   .weather-item-container .open-comments-btn {
     display: inline-block;
     padding: 2px;

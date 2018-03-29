@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import StarRatings from 'react-star-ratings'
 import API from '../../services/api'
-import {getUserFromLocaleStorage} from '../../utils/main'
+import {getUserFromSessionStorage} from '../../utils/main'
 
 export default class Rating extends Component {
   constructor (props) {
@@ -20,14 +20,14 @@ export default class Rating extends Component {
     }
   }
   changeRate (newRating) {
-    getUserFromLocaleStorage()
+    getUserFromSessionStorage()
       .then((user) => {
         if (user) {
           this.setRating(newRating, user)
         } else {
           let SignInPopupContent = {
-            title: 'Rating',
-            description: 'Please sign in to continue',
+            title: 'Рейтинг',
+            description: 'Щоб продовжити, будь ласка, увійдіть.',
             close: true,
             callback: (userData) => {
               this.setRating(newRating, userData)
@@ -50,7 +50,7 @@ export default class Rating extends Component {
             .then((res) => {
               if (res) {
                 this.props.updateResource(res, this.props.indexOfRecource)
-                this.updateRating(rating)
+                // this.updateRating(rating)
               }
             })
         }

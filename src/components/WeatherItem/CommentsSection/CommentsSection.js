@@ -4,7 +4,7 @@ import API from '../../../services/api'
 
 // Components
 import TextArea from '../../TextArea/TextArea'
-import {getUserFromLocaleStorage} from '../../../utils/main'
+import {getUserFromSessionStorage} from '../../../utils/main'
 
 export default class CommentsSection extends Component {
   constructor (props) {
@@ -55,14 +55,14 @@ export default class CommentsSection extends Component {
 
   clickOnSubmitButton () {
     if (this.state.value) {
-      getUserFromLocaleStorage()
+      getUserFromSessionStorage()
         .then((user) => {
           if (user) {
             this.submit(user)
           } else {
             let SignInPopupContent = {
-              title: 'Comment',
-              description: 'Please sign in to continue',
+              title: 'Коментар',
+              description: 'Щоб продовжити, будь ласка, увійдіть.',
               close: true,
               callback: (userData) => {
                 this.submit(userData)
