@@ -1,5 +1,10 @@
 export const CITIES = [
   {
+    value: 'Україна',
+    region: 'Ukraine',
+    number: 'any'
+  },
+  {
     value: 'Вінниця',
     region: `Vinnyts'ka Oblast'`,
     number: 1
