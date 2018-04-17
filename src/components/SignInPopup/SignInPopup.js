@@ -1,7 +1,7 @@
 /* global FB */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {setUserToSessionStorage} from '../../utils/main'
+import { setUserToSessionStorage, changeAvatarUrl } from '../../utils/main'
 
 export default class SignInPopup extends Component {
   constructor (props) {
@@ -18,6 +18,7 @@ export default class SignInPopup extends Component {
           userData.userId = response.id
           userData.userName = response.name
           userData.userAvatar = response.picture.data.url
+          userData.userAvatar = changeAvatarUrl(userData.userAvatar)
           setUserToSessionStorage(userData)
           this.close(userData)
         })
@@ -30,6 +31,7 @@ export default class SignInPopup extends Component {
               userData.userId = response.id
               userData.userName = response.name
               userData.userAvatar = response.picture.data.url
+              userData.userAvatar = changeAvatarUrl(userData.userAvatar)
               setUserToSessionStorage(userData)
               this.close(userData)
             })

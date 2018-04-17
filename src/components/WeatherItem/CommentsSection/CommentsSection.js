@@ -4,7 +4,9 @@ import API from '../../../services/api'
 
 // Components
 import TextArea from '../../TextArea/TextArea'
-import {getUserFromSessionStorage} from '../../../utils/main'
+
+// helpers
+import { getUserFromSessionStorage, changeAvatarUrl } from '../../../utils/main'
 
 export default class CommentsSection extends Component {
   constructor (props) {
@@ -127,6 +129,7 @@ export default class CommentsSection extends Component {
         >
           <ul className='comment-wrapper'>
             {this.state.comments.map((item, i) => {
+              item.userAvatar = changeAvatarUrl(item.userAvatar)
               return (
                 <li key={`comment-${i + 1}`} className='comment-item'>
                   <div className='avatar-container'>

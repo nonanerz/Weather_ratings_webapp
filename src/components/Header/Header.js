@@ -10,7 +10,7 @@ export default class Header extends Component {
         <div className='container'>
           <div className='logo blur' ref={logo => { this.logo = logo }}>
             <h1 className='title'>WeatherRate</h1>
-            <img onClick={this.refreshPage} src={require('../../assets/images/wr-white.png')} alt='weather' />
+            <img onClick={this.refreshPage} src={require('../../assets/images/wr-white.svg')} alt='weather' />
           </div>
         </div>
         <span className='blur-container' />
