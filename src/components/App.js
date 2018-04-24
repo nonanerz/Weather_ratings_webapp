@@ -37,6 +37,7 @@ class App extends Component {
   }
   componentDidMount () {
       ReactGA.initialize('UA-118080321-1');
+      ReactGA.pageview(window.location.pathname + window.location.search);
       // Facebook
     (function (d, s, id) {
       let js
