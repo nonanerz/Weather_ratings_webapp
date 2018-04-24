@@ -9,11 +9,13 @@ import API from '../services/api'
 import {BrowserRouter} from 'react-router-dom'
 import {Switch, Route} from 'react-router'
 
+
 // components
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Home from './pages/Home/HomeContainer'
 import SignInPopup from './SignInPopup/SignInPopupContainer'
+import ReactGA from 'react-ga'
 
 const NotFound = () => {
   return (
@@ -33,8 +35,9 @@ class App extends Component {
     super(props)
     this.state = {}
   }
-  componentWillMount () {
-    // Facebook
+  componentDidMount () {
+      ReactGA.initialize('UA-118080321-1');
+      // Facebook
     (function (d, s, id) {
       let js
       let fjs = d.getElementsByTagName(s)[0]
