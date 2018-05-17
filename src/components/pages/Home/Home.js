@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import API from '../../../services/api'
 import {CITIES} from '../../../constans/cities'
 import update from 'immutability-helper'
+import {Helmet} from 'react-helmet'
 
 // components
 import Select from '../../Select/Select'
@@ -103,6 +104,25 @@ export default class Home extends Component {
   render () {
     return (
       <section className='home-section'>
+        <Helmet>
+          <title>whatCharity – Search, find, volunteer and give to charities</title>
+          <meta name='description' content='Ми допомагаємо людям знайти найкращий прогноз погоди у їхньому міст.' />
+          <meta property='og:type' content='website' />
+          <meta property='og:title' content='WeatherRate' />
+          <meta property='og:description' content='Ми допомагаємо людям знайти найкращий прогноз погоди у їхньому міст.' />
+          <meta property='og:site_name' content='WeatherRate' />
+          {/* <meta property='og:image' content={sharingImage} /> */}
+          {/* <meta property='og:image:secure_url' content={sharingImage} /> */}
+          <meta itemProp='name' content='WeatherRate' />
+          <meta itemProp='description' content='Ми допомагаємо людям знайти найкращий прогноз погоди у їхньому міст.' />
+          {/* <meta content={sharingImage} itemProp='image' /> */}
+          <meta name='twitter:card' content='summary' />
+          <meta name='twitter:site' content='@WeatherRate' />
+          <meta name='twitter:creator' content='@WeatherRate' />
+          <meta name='twitter:title' content='WeatherRate' />
+          <meta name='twitter:description' content='Ми допомагаємо людям знайти найкращий прогноз погоди у їхньому міст.' />
+          {/* <meta name='twitter:image' content={sharingImage} /> */}
+        </Helmet>
         <AboutUs />
         <div className='container resources-list'>
           <Select

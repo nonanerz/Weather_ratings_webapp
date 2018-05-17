@@ -9,7 +9,6 @@ import API from '../services/api'
 import {BrowserRouter} from 'react-router-dom'
 import {Switch, Route} from 'react-router'
 
-
 // components
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
@@ -36,8 +35,8 @@ class App extends Component {
     this.state = {}
   }
   componentDidMount () {
-      ReactGA.initialize('UA-118080321-1');
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.initialize('UA-118080321-1')
+    ReactGA.pageview(window.location.pathname + window.location.search);
       // Facebook
     (function (d, s, id) {
       let js

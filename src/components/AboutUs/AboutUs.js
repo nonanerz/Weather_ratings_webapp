@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// components
+import { Share } from '../Share/Share'
+
 export default class AboutUs extends Component {
   render () {
     return (
@@ -11,6 +14,7 @@ export default class AboutUs extends Component {
             ці системи, як вони працюють у вашому регіоні.
           </p>
         </div>
+        <Share />
       </section>
     )
   }

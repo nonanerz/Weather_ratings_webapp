@@ -13,7 +13,6 @@ export default class SignInPopup extends Component {
     FB.getLoginStatus((response) => {
       if (response.status === 'connected') {
         FB.api('/me', {fields: 'id,name,picture.width(500).height(500)'}, (response) => {
-          console.log(response)
           let userData = {}
           userData.userId = response.id
           userData.userName = response.name
@@ -26,7 +25,6 @@ export default class SignInPopup extends Component {
         FB.login((response) => {
           if (response.status === 'connected') {
             FB.api('/me', {fields: 'id,name,picture.width(500).height(500)'}, (response) => {
-              console.log(response)
               let userData = {}
               userData.userId = response.id
               userData.userName = response.name
